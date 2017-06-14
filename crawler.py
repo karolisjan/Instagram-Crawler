@@ -4,8 +4,8 @@ Created on Mon Jun 12 23:39:45 2017
 
 @author: Karolis
 """
+import json    
 import time
-import json
 from bs4 import BeautifulSoup
 import selenium.webdriver as webdriver
 from selenium.webdriver.common.keys import Keys
@@ -123,7 +123,9 @@ if __name__ == "__main__":
             break
             
         post_num += 1    
-		
-	with open('json.txt', 'w') as outfile:
-    	json.dump(data, outfile)
     
+    with open('collected_data.json', 'w') as outfile:
+        json.dump(data, outfile)
+        
+#    with open('collected_data.json') as json_data:
+#        d = json.load(json_data)
